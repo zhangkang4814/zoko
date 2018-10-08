@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>聊天室</title>
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<style>
+		.center{
+			display: block;
+			float: none;
+			margin: 30px auto;
+		}
+		#bnk{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 center">
+				<div class="window" style="border:1px solid black;height:450px;overflow:auto;"></div>
+				<div class="row">
+					<div class="col-md-10 center">
+						<textarea class="form-control content" rows="3"></textarea>	
+					</div>
+					<div class="col-md-2 center">
+						<button class="btn btn-info enter" style="height:100%;">发送<br>enter</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bnk">
+      <div class="media me">
+        <div class="media-body text-right">
+          <h4 class="media-heading">Me</h4>
+          <p>发送的内容</p>
+        </div>
+        <div class="media-right">
+          <a href="#">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjU0NjhhNjIwOCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NTQ2OGE2MjA4Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+          </a>
+    </div>
+    </div>
+
+    <div class="media other">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjU0Njg5ZjkyMyB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NTQ2ODlmOTIzIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">其他用户名字</h4>
+          <p>其他用户消息</p>
+        </div>
+    </div>
+   </div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var socket = io.connect('/');
+	$('.enter').click(function(){
+
+		msg=htmlEncode($('.content').val());
+
+		var reg = /^\s+$/;
+
+		res=reg.test(msg);
+
+		if(msg=='' || res){
+			alert('你还没有编辑任何消息哦!!!');
+			$('.content').val('');
+		}else{
+			item = $('#bnk .me').clone();
+
+			item.find('p').html(msg);
+
+			$('.window').append(item);
+
+			$('.content').val('');
+
+			// name=$.cookie('name');
+
+			socket.emit('news',{username:name,msg:msg});
+		}
+		
+	});
+	$(window).keydown(function(e){
+		if(e.keyCode==13){
+			$('.enter').trigger('click');
+			return false;
+		}
+	});
+
+	socket.on('news',function(data){
+		message=$('#bnk .other').clone();
+		message.find('p').html(data.msg);
+		message.find('h4').html(data.username);
+		$('.window').append(message);
+	});
+	function htmlEncode(value){  
+            return $('<span/>').text(value).html();        
+    }
+    
+</script>
+</html>
